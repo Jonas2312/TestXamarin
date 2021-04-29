@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestXamarin.Views.NewItemPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Item"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="3" Padding="15">
+                <Label Text="Datum" FontSize="Medium" />
+                <Entry Text="{Binding Text, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="Hautfeuchtigkeit in %" FontSize="Medium" />
+                <Editor Text="{Binding Description, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <Image x:Name="PhotoImage" Source="{Binding Photo, Mode=TwoWay}" /> 
+                <Button x:Name="CameraButton" Text="Take Photo"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
