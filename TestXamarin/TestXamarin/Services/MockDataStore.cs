@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TestXamarin.Models;
+using Xamarin.Forms;
 
 namespace TestXamarin.Services
 {
@@ -12,14 +13,12 @@ namespace TestXamarin.Services
 
         public MockDataStore()
         {
+            ImageSource i = ImageSource.FromFile("acne.jpg");
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "21.02.2020", Description="60", Photo= i},
+                new Item { Id = Guid.NewGuid().ToString(), Text = "22.02.2020", Description="40", Photo= i },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "23.02.2020", Description="55", Photo= i }
             };
         }
 

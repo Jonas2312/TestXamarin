@@ -13,7 +13,7 @@
                 <Entry Text="{Binding Text, Mode=TwoWay}" FontSize="Medium" />
                 <Label Text="Hautfeuchtigkeit in %" FontSize="Medium" />
                 <Editor Text="{Binding Description, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-                <Image x:Name="PhotoImage" Source="{Binding Photo, Mode=TwoWay}" /> 
+                <Image WidthRequest="100" HeightRequest="200" x:Name="PhotoImage" Source="{Binding Photo, Mode=TwoWay}" /> 
                 <Button x:Name="CameraButton" Text="Take Photo"/>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>

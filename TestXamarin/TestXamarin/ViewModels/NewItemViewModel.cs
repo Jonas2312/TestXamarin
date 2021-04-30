@@ -11,7 +11,7 @@ namespace TestXamarin.ViewModels
     {
         private string text;
         private string description;
-
+        private ImageSource photo;
         public NewItemViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
@@ -38,6 +38,12 @@ namespace TestXamarin.ViewModels
             set => SetProperty(ref description, value);
         }
 
+        public ImageSource Photo
+        {
+            get => photo;
+            set => SetProperty(ref photo, value);
+        }
+
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
 
@@ -53,7 +59,8 @@ namespace TestXamarin.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                Photo = Photo
             };
 
             await DataStore.AddItemAsync(newItem);

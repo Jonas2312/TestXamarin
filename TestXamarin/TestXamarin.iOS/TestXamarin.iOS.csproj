@@ -142,4 +142,7 @@
       <Name>TestXamarin</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\acne.jpg" />
+  </ItemGroup>
 </Project>

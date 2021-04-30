@@ -54,6 +54,7 @@ namespace TestXamarin.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                Photo = item.Photo;
             }
             catch (Exception)
             {
